@@ -1,6 +1,6 @@
 # lambda-web-adapter-fastapi
 
-[aws-lambda-web-adapter](https://github.com/awslabs/aws-lambda-web-adapter/tree/main/examples/fastapi)を参考にfastapiをlambda-web-adapterで実装した。フロントエンドはfastapiでhtmlファイルをレスポンスする形にしている。CDNでReactで実装をしている。
+を参考にfastapiをlambda-web-adapterで実装した。フロントエンドはfastapiでhtmlファイルをレスポンスする形にしている。CDNでReactで実装をしている。
 
 ## Requirements
 
@@ -41,3 +41,9 @@ poetryで管理したパッケージを以下コマンドでrequirements.txtに�
 ~~~bash
 poetry export -f requirements.txt --output requirements.txt
 ~~~
+
+### 参考
+
+- [Lambda Web Adapter でウェブアプリを (ほぼ) そのままサーバーレス化する](https://aws.amazon.com/jp/builders-flash/202301/lambda-web-adapter/?awsf.filter-name=*all)
+- [aws-lambda-web-adapter](https://github.com/awslabs/aws-lambda-web-adapter/tree/main/examples/fastapi)
+- [CDNの使い方](https://lightgauge.net/language/javascript/cdn-react-mui)
