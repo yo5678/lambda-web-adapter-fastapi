@@ -22,10 +22,16 @@ poetry run sam deploy
 ### Dockerfile
 
 - Portは8080にしないとLambda上で動作しない
+- 使用するpythonのイメージは以下を使用しないとLambda上で動作しない
+
+~~~Dockerfile
+FROM public.ecr.aws/docker/library/python:3.8.12-slim-buster
+~~~
+
 - ローカルでDockerfileのデバックをする際は以下コマンドを使用すること 理由は[参考文献](https://zenn.dev/shake_sanma/articles/1c6475ba73da48)を参照
 
-~~~bash
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+~~~Dockerfile
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
 ~~~
 
 ### requirements.txtについて
